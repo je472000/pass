@@ -50,9 +50,6 @@ header {
   height: 2px;
 }
 
-.card-body {
-  min-height: 100px;
-}
 
 .wrap {
   display: flex;
@@ -95,7 +92,7 @@ header {
   transition: opacity .2s;
 
 }
-.hover {
+:hover .slider{
   opacity: 1;
 }
 .-webkit-slider-thumb{
@@ -126,7 +123,7 @@ header {
   user-select: none;
   cursor: pointer;
 }
-.hover input , .checkmark {
+:hover input  .checkmark {
   background-color: yellow;
 }
 .container input {
@@ -136,10 +133,10 @@ header {
   height: 0;
   width: 0;
 }
-.checked , .checkmark {
+.checkbox , .checkmark {
   background-color: turquoise;
 }
-  .after {
+.checkmark ,.checkbox::after {
   display: block;
 
 }
@@ -151,7 +148,7 @@ header {
   width: 25px;
   background-color: wheat;
 }
-  .after {
+  .checkmark::after {
   content: "";
   position: absolute;
   display: none;
