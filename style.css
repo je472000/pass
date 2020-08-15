@@ -95,10 +95,10 @@ header {
   transition: opacity .2s;
 
 }
-&:hover {
+.hover {
   opacity: 1;
 }
-&::-webkit-slider-thumb{
+.-webkit-slider-thumb{
   appearance: none;
   width: 30px;
   height: 30px;
@@ -126,7 +126,7 @@ header {
   user-select: none;
   cursor: pointer;
 }
-&:hover input ~ .checkmark {
+.hover input , .checkmark {
   background-color: yellow;
 }
 .container input {
@@ -136,10 +136,10 @@ header {
   height: 0;
   width: 0;
 }
-&:checked ~ .checkmark {
+.checked , .checkmark {
   background-color: turquoise;
 }
-  &:after {
+  .after {
   display: block;
 
 }
@@ -151,7 +151,7 @@ header {
   width: 25px;
   background-color: wheat;
 }
-&::after {
+  .after {
   content: "";
   position: absolute;
   display: none;
@@ -163,6 +163,24 @@ header {
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 
+}
+.btn-refresh {
+  font-size: 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: teal;
+  color: orange;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.password {
+  font-size: 2rem;
+  overflow-wrap: break-word;
+  padding: 5px 0px;
+  margin-bottom: 15px;
+  border: solid purple;
+  border-width: 2px 0;
 }
 .card-footer {
   text-align: center;
