@@ -106,7 +106,63 @@ header {
   border-radius: 50%;
   background-color: burlywood;
   cursor: pointer;
-  
+
+}
+.options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+
+}
+.container {
+  display: block;
+  position: relative;
+  width: 160px;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  user-select: none;
+  cursor: pointer;
+}
+&:hover input ~ .checkmark {
+  background-color: yellow;
+}
+.container input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+&:checked ~ .checkmark {
+  background-color: turquoise;
+}
+  &:after {
+  display: block;
+
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: wheat;
+}
+&::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid wheat;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+
 }
 .card-footer {
   text-align: center;

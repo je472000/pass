@@ -23,10 +23,14 @@
             </header>
             <section>
               <div class= "slidecontainer">
-                <label for="passRange">length: </label>
+                <label for="passRange"> v-model="passwodlength">length: {{ passwordlength }}</label>
                 <input type="range" min="8" max="128" class="slider" id="passRange">
               </div>
             <div class= "options">
+              <label class="container" v-for="(option, index) in optiondata" :key="index"></label>
+              {{ option.name }}
+              <input type="checkbox" v-model="option.status">
+              <span class="checkmark"></span>
             </div>
           </section>
             </div>
